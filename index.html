@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="history-section">
+            <div class="history-header">
+                <h2><i class="fas fa-history"></i> Review History</h2>
+            </div>
+            <ul class="history-list">
+                <p class="no-history">No reviews yet.</p>
+            </ul>
+        </aside>
+
+        <main class="chat-section">
+            <header class="chat-header">
+                <h1>AI Code Reviewer 🤖</h1>
+                <p>Paste your code below to get an instant review.</p>
+            </header>
+            
+            <div class="chat-container">
+                <div class="chat-window" id="chatWindow">
+                    <div class="chat-message ai-message">
+                        <div class="message-content">
+                            <p>Hello! I'm ready to review your code. Paste a snippet in the text area below and click 'Review Code' to get started.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thinking-overlay" id="thinkingOverlay" style="display: none;">
+                    <i class="fas fa-brain thinking-icon"></i>
+                    <p>Thinking...</p>
+                </div>
+            </div>
+
+            <footer class="chat-input-area">
+                <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+                <button id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Review Code
+                </button>
+            </footer>
+        </main>
+    </div>
+    
+    <script src="script.js" defer></script>
+
+</body>
+</html>
